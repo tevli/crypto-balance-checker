@@ -2,6 +2,6 @@
 
 namespace Tevli\CryptoBalanceChecker;
 
-class CryptoBalanceCheckerClass
+class CryptoBalanceChecker
 {
 }
