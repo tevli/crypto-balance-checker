@@ -15,22 +15,34 @@ class Ethereum
         $this->apiKey = $apiKey;
     }
 
+    /**
+     * Convert balance to Wei.
+     */
     public function toWei()
     {
         return $this->balance;
     }
 
-    public function toKwei()
+    /**
+     * Convert balance to Kwei.
+     */
+    public function toKwei(): float|int
     {
         return $this->balance / pow(10, 3);
     }
 
-    public function toGwei()
+    /**
+     * Convert balance to Gwei.
+     */
+    public function toGwei(): float|int
     {
         return $this->balance / pow(10, 9);
     }
 
-    public function toMwei()
+    /**
+     * Convert balance to Wei.
+     */
+    public function toMwei(): float|int
     {
         return $this->balance / pow(10, 6);
     }
@@ -38,7 +50,7 @@ class Ethereum
     /**
      * Get Wallet balance.
      */
-    public function getBalance()
+    public function getBalance(): Ethereum
     {
         if(empty($this->balance)) {
             if($this->query() == true) {
@@ -46,17 +58,17 @@ class Ethereum
                     return $this->balance->getMessage();
                 }
 
-                return $this->balance;
+                return $this;
             }
         }
 
-        return $this->balance;
+        return $this;
     }
 
     /**
      * Make request to the blockchain and get the balance.
      */
-    private function query()
+    private function query(): \Exception|bool
     {
         try {
             $result = file_get_contents("https://api.etherscan.io/api?module=account&action=balance&address=".$this->address."&tag=latest&apikey=".$this->apiKey);

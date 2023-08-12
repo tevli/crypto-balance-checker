@@ -1,6 +1,6 @@
 {
     "name": "tevli/crypto-balance-checker",
-    "description": "This package quries different crypto currency networks, when given an address and a network and returns the balance of said address.",
+    "description": "This package queries different crypto currency networks, when given an address and a network and returns the balance of said address.",
     "keywords": [
         "tevli",
         "crypto-balance-checker"
@@ -40,7 +40,7 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            
+
             "phpstan/extension-installer": true
         }
     },
