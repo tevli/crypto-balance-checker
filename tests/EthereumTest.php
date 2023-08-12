@@ -16,8 +16,9 @@ class EthereumTest extends TestCase
         $this->assertIsNumeric($eth->getBalance()->toWei());
     }
 
-    public function test_eth_returns_eth_object(){
+    public function test_eth_returns_eth_object()
+    {
         $eth = new Ethereum('0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a', 'ZNKTD8JI378P8US4CW8C26EKFYES1BB8IB');
-        $this->assertInstanceOf('Tevli\CryptoBalanceChecker\Ethereum',$eth->getBalance());
+        $this->assertInstanceOf('Tevli\CryptoBalanceChecker\Ethereum', $eth->getBalance());
     }
 }
