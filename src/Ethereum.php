@@ -2,7 +2,7 @@
 
 namespace Tevli\CryptoBalanceChecker;
 
-class Ethereum
+class Ethereum implements CryptoBalanceChecker
 {
     private string $address;
     private string $apiKey;
@@ -48,7 +48,7 @@ class Ethereum
     }
 
     /**
-     * Get Wallet balance.
+     * {@inheritDoc}
      */
     public function getBalance(): Ethereum
     {
@@ -66,7 +66,7 @@ class Ethereum
     }
 
     /**
-     * Make request to the blockchain and get the balance.
+     * This typically queries the blockchain and if successful, sets the balance.
      */
     private function query(): \Exception|bool
     {
