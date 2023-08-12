@@ -4,7 +4,7 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/tevli/crypto-balance-checker/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/tevli/crypto-balance-checker/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/tevli/crypto-balance-checker.svg?style=flat-square)](https://packagist.org/packages/tevli/crypto-balance-checker)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Check Cryptocurrency balance for different chains. 
 
 ## Installation
 
