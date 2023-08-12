@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Tevli\CryptoBalanceChecker\Tests;
 
 use PHPUnit\Framework\TestCase;
 
