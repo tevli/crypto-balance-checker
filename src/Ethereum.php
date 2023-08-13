@@ -4,10 +4,24 @@ namespace Tevli\CryptoBalanceChecker;
 
 class Ethereum implements CryptoBalanceChecker
 {
+    /**
+     * @var String The address being queried for.
+     */
     private string $address;
+
+    /**
+     * @var String The apiKey obtained from etherscan.io
+     */
     private string $apiKey;
+    /**
+     * @var string The unit the balance is denominated in.
+     */
     private string $unit;
-    private $balance;
+
+    /**
+     * @var numeric  The balance.
+     */
+    private string|int|float $balance;
 
     public function __construct(String $address, String $apiKey)
     {
@@ -54,9 +68,6 @@ class Ethereum implements CryptoBalanceChecker
     {
         if(empty($this->balance)) {
             if($this->query() == true) {
-                if ($this->balance instanceof \Exception) {
-                    return $this->balance->getMessage();
-                }
 
                 return $this;
             }
