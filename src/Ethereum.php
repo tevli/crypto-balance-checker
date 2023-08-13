@@ -35,6 +35,7 @@ class Ethereum implements CryptoBalanceChecker
     public function toWei()
     {
         $this->unit = 'Wei';
+
         return $this->balance;
     }
 
@@ -44,6 +45,7 @@ class Ethereum implements CryptoBalanceChecker
     public function toKwei(): float|int
     {
         $this->unit = 'Kwei';
+
         return $this->balance / pow(10, 3);
     }
 
@@ -53,6 +55,7 @@ class Ethereum implements CryptoBalanceChecker
     public function toGwei(): float|int
     {
         $this->unit = 'Gwei';
+
         return $this->balance / pow(10, 9);
     }
 
@@ -62,6 +65,7 @@ class Ethereum implements CryptoBalanceChecker
     public function toMwei(): float|int
     {
         $this->unit = 'Mwei';
+
         return $this->balance / pow(10, 6);
     }
 
