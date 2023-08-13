@@ -100,7 +100,7 @@ class Ethereum implements CryptoBalanceChecker
         return true;
     }
 
-    public function getUnit()
+    public function getUnit(): String
     {
         return $this->unit;
     }
