@@ -57,11 +57,13 @@ class Bitcoin implements CryptoBalanceChecker
 
     public function toSatoshi()
     {
+        $this->unit = 'Satoshi';
         return $this->balance;
     }
 
     public function toBTC()
     {
+        $this->unit = 'BTC';
         return $this->balance / pow(10, 8);
     }
 
